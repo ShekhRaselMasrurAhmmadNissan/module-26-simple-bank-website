@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bank Inside</title>
+
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body>
+		<!-- Header Section Start -->
+		<header>
+			<h1 class="text-5xl text-center mt-6">
+				Let's get some
+				<span class="font-semibold text-violet-600">Money</span>!!!
+			</h1>
+		</header>
+		<!-- Header Section End -->
+
+		<!-- Main Section Start -->
+		<main>
+			<!-- Account Information Start -->
+			<section class="mt-12">
+				<div class="grid grid-cols-3 gap-4 w-3/4 mx-auto text-white">
+					<div
+						class="bg-green-400 p-8 rounded-xl text-center hover:scale-105 duration-500"
+					>
+						<h4 class="text-2xl">Deposit</h4>
+						<h2 class="text-5xl">
+							$<span id="deposit-total">00</span>
+						</h2>
+					</div>
+					<div
+						class="bg-yellow-500 p-8 rounded-xl text-center hover:scale-105 duration-500"
+					>
+						<h4 class="text-2xl">Withdraw</h4>
+						<h2 class="text-5xl">
+							$<span id="withdraw-total">00</span>
+						</h2>
+					</div>
+					<div
+						class="bg-violet-500 p-8 rounded-xl text-center hover:scale-105 duration-500"
+					>
+						<h4 class="text-2xl">Balance</h4>
+						<h2 class="text-5xl">
+							$<span id="total-balance">1240</span>
+						</h2>
+					</div>
+				</div>
+			</section>
+			<!-- Account Information End -->
+
+			<!-- Account Operation Start -->
+			<section class="mt-12">
+				<div class="grid grid-cols-2 gap-4 w-3/4 mx-auto">
+					<div class="bg-fuchsia-400 p-8 rounded-xl space-y-5">
+						<h4 class="text-2xl">Please Deposit</h4>
+						<div class="relative">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-8 w-8 absolute top-2 left-1"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+								/>
+							</svg>
+							<input
+								class="w-3/4 block p-3 pl-10 rounded-md outline-none"
+								type="number"
+								name="deposit-field"
+								id="deposit-field"
+								placeholder="Amount you want to deposit"
+							/>
+						</div>
+						<button
+							id="btn-deposit"
+							class="bg-amber-600 hover:bg-amber-400 duration-500 ease-in-out px-8 py-2 text-white font-medium rounded-lg"
+						>
+							Deposit
+						</button>
+					</div>
+					<div class="bg-indigo-300 p-8 rounded-xl space-y-5">
+						<h4 class="text-2xl">Please Withdraw</h4>
+						<div class="relative">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-8 w-8 absolute top-2 left-1"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+								/>
+							</svg>
+							<input
+								class="w-3/4 block p-3 pl-10 rounded-md outline-none"
+								type="number"
+								name="withdraw-field"
+								id="withdraw-field"
+								placeholder="Amount you want to withdraw"
+							/>
+						</div>
+						<button
+							id="btn-withdraw"
+							class="bg-amber-600 hover:bg-amber-400 duration-500 ease-in-out px-8 py-2 text-white font-medium rounded-lg"
+						>
+							Withdraw
+						</button>
+					</div>
+				</div>
+			</section>
+			<!-- Account Operation End -->
+		</main>
+		<!-- Main Section End -->
+
+		<!-- JS Script -->
+		<script src="./script/deposit.js"></script>
+		<script src="./script/withdraw.js"></script>
+	</body>
+</html>
